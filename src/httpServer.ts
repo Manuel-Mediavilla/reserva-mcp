@@ -50,7 +50,7 @@ app.get("/mcp", async (req, res) => {
   await transport.handleRequest(req, res);
 });
 
-const PORT = Number(process.env.MCP_PORT) || 3002;
+const PORT = Number(process.env.PORT) || Number(process.env.MCP_PORT) || 3002;
 app.listen(PORT, () => {
   console.log(`[reserva-mcp] servidor HTTP escuchando en http://localhost:${PORT}/mcp`);
 });
